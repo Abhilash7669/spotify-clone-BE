@@ -13,6 +13,13 @@ v1Router.use("/users", userRouter);
 v1Router.use("/artists", artistRouter);
 v1Router.use("/albums", albumRouter);
 v1Router.use("/songs", songsRouter);
-v1Router.use("/playlists", playlistRouter);
+v1Router.use("/playlists", playlistRouter);{
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
 
 export default v1Router;

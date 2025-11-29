@@ -39,10 +39,12 @@ export namespace LILLY_AUTH_CONTROLLER {
     res.status(201).json({
       success: true,
       message: "Logged in",
-      token,
-      userId,
-      isAdmin: user.isAdmin,
-      profilePicture: user.profilePicture,
+      data: {
+        token,
+        userId,
+        isAdmin: user.isAdmin,
+        profilePicture: user.profilePicture,
+      },
     });
   }
 
